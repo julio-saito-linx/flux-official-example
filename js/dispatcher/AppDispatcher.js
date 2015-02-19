@@ -12,5 +12,14 @@
  */
 
 var Dispatcher = require('flux').Dispatcher;
+var splice = Array.prototype.splice;
 
-module.exports = new Dispatcher();
+var dispatch_original = Dispatcher.prototype.dispatch;
+Dispatcher.prototype.dispatch = function() {
+	var args = splice.call(arguments, 0);
+	console.debug('Dispatcher.dispatch:', args[0]);
+	return dispatch_original.apply(this, args);
+};
+
+var dispatcher = new Dispatcher();
+module.exports = dispatcher;
