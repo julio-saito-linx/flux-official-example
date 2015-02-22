@@ -61,6 +61,9 @@ var TodoItem = React.createClass({
             checked={todo.complete}
             onChange={this._onToggleComplete}
           />
+          <label className="todoItemId">
+            {todo.id}
+          </label>
           <label onDoubleClick={this._onDoubleClick}>
             {todo.text}
           </label>

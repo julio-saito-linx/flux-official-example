@@ -18,6 +18,32 @@ var CHANGE_EVENT = 'change';
 
 var _todos = {};
 
+
+// INITIAL DATA
+var new_id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
+_todos[new_id] = {
+  id: new_id,
+  complete: true,
+  text: 'Primeira tarefa'
+};
+
+new_id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
+_todos[new_id] = {
+  id: new_id,
+  complete: false,
+  text: 'Segunda da tarde'
+};
+
+new_id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36);
+_todos[new_id] = {
+  id: new_id,
+  complete: false,
+  text: 'Mais uma'
+};
+
+
+
+
 /**
  * Create a TODO item.
  * @param  {string} text The content of the TODO

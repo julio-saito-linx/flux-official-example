@@ -16,3 +16,12 @@
 #todo-list li .edit {
   display: inline;
 }
+
+label.todoItemId {
+	float: left;
+	position: absolute;
+	font-size: 11px;
+	top: 29px;
+	left: 0px;
+	color: #A19E65;
+}

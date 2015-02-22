@@ -36,17 +36,17 @@ var Footer = React.createClass({
     }
 
     var itemsLeft = total - completed;
-    var itemsLeftPhrase = itemsLeft === 1 ? ' item ' : ' items ';
-    itemsLeftPhrase += 'left';
+    var itemsLeftPhrase = itemsLeft === 1 ? ' item ' : ' itens ';
+    itemsLeftPhrase += 'sobrando';
 
-    // Undefined and thus not rendered if no completed items are left.
+    // Undefined and thus not rendered if no completed items are sobrando.
     var clearCompletedButton;
     if (completed) {
       clearCompletedButton =
         <button
           id="clear-completed"
           onClick={this._onClearCompletedClick}>
-          Clear completed ({completed})
+          Remover itens completos ({completed})
         </button>;
     }
 

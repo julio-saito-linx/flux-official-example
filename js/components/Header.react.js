@@ -22,7 +22,7 @@ var Header = React.createClass({
         <h1>todos</h1>
         <TodoTextInput
           id="new-todo"
-          placeholder="What needs to be done?"
+          placeholder="O que deseja fazer hoje?"
           onSave={this._onSave}
         />
       </header>
